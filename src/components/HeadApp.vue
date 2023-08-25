@@ -18,19 +18,19 @@ import locateImg from "@/assets/locate.svg";
 
     <div class="header__locate">
       <img :src="locateImg" alt="">
-      <p class = "context"><a href="">Измайлово </a>Круглосуточно</p>
+      <p class="context"><a href="">Измайлово </a>Круглосуточно</p>
       <h3>+7 (495) 980-66-22</h3>
     </div>
 
     <div class="header__locate">
       <img :src="locateImg" alt="">
-      <p class = "context"><a href="">Мытищи </a>Круглосуточно</p>
+      <p class="context"><a href="">Мытищи </a>Круглосуточно</p>
       <h3>+7 (495) 980-66-22</h3>
     </div>
 
     <div class="header__locate">
       <img :src="locateImg" alt="">
-      <p class = "context"><a href="">Хор.-Мневники </a>Круглосуточно</p>
+      <p class="context"><a href="">Хор.-Мневники </a>Круглосуточно</p>
       <h3>+7 (495) 980-66-22</h3>
     </div>
 
