@@ -1,19 +1,22 @@
 <template>
-  <HeadApp></HeadApp>
-  <route-page-app></route-page-app>
-  <card-basket-app></card-basket-app>
+  <HeadApp/>
+  <route-page-app/>
+  <card-basket-app/>
+  <recommend-app/>
 </template>
 
 <script>
 import HeadApp from './components/HeadApp.vue'
 import RoutePageApp from "@/components/RoutePageApp.vue";
 import CardBasketApp from "@/components/CardBasketApp.vue";
+import RecommendApp from "@/components/RecommendApp.vue";
 
 export default {
   components: {
     HeadApp,
     RoutePageApp,
-    CardBasketApp
+    CardBasketApp,
+    RecommendApp
   }
 }
 </script>
@@ -40,6 +43,9 @@ body{
   }
   h3{
     font-size: 18px;
+  }
+  h4{
+    margin-bottom: 15px;
   }
   p{
     font-size: 12px;

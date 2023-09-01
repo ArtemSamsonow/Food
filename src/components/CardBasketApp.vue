@@ -23,8 +23,13 @@ const vivatStore = useVivatStore()
             </svg>
           </div>
           <p class="context">{{ card.description }}</p>
+          <button-counter-app
+          :price = card.price
+          :discount = card.discount
+          :counts = card.counts
+          :id = card.id
+          />
         </div>
-        <button-counter-app></button-counter-app>
       </div>
       <div class="basket__cards__gifts">
         <h2>Подарки</h2>
@@ -44,7 +49,7 @@ const vivatStore = useVivatStore()
         </div>
       </div>
     </div>
-  <PromoCodeApp></PromoCodeApp>
+  <PromoCodeApp/>
 </div>
 </template>
 
@@ -52,11 +57,20 @@ const vivatStore = useVivatStore()
 .basket{
   display: flex;
   .basket__card{
+    display: flex;
     background-color: #F1F1F1;
     border-radius: 10px;
     margin: 40px 0 40px 0;
-    padding: 15px;
+    img{
+      border-radius: 10px 0 0 10px;
+      width: 205px;
+      height: 215px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
     .basket__card__item{
+      padding: 15px;
+      width: 100%;
       .basket__card__item--delete{
         display: flex;
         justify-content: space-between;

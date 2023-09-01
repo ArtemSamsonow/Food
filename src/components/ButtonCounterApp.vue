@@ -1,4 +1,34 @@
 <script setup>
+import {useVivatStore} from "@/storege/store";
+
+
+const vivatStore = useVivatStore();
+
+
+
+// eslint-disable-next-line no-undef
+defineProps({
+  price: Number,
+  discount: Number,
+  counts: Number,
+  id: Number
+});
+
+function plus (id) {
+  const element = {id: id},
+      indexProduct = vivatStore.basket.findIndex(obj => obj.id === element.id);
+  vivatStore.basket[indexProduct].counts += 1;
+}
+
+function minus (id) {
+  const element = {id: id},
+      indexProduct = vivatStore.basket.findIndex(obj => obj.id === element.id);
+  if (vivatStore.basket[indexProduct].counts <= 1){
+    vivatStore.basket[indexProduct].counts = 1;
+  }else {
+    vivatStore.basket[indexProduct].counts -= 1;
+  }
+}
 
 </script>
 
@@ -7,18 +37,18 @@
 
   <div class="basket__card__counter__price">
     <span class="disabled"></span>
-    <span>800 ₽</span>
+    <span>{{ price - discount }} ₽</span>
   </div>
 
   <div class="basket__card__counter__count">
-    <button class="button--border left">+</button>
-    <div class="count">1</div>
-    <button class="button--border right">-</button>
+    <button class="button--border left" v-on:click="minus(id)">-</button>
+    <div class="count">{{ counts }}</div>
+    <button class="button--border right" v-on:click="plus(id)">+</button>
   </div>
 
   <div class="basket__card__counter__newPrice">
     <span class="disabled"></span>
-    <span>800 ₽</span>
+    <span class="finalPrice">{{ (price - discount) * counts }} ₽</span>
   </div>
 </div>
 </template>
@@ -28,7 +58,7 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 60px;
   .basket__card__counter__count{
     display: flex;
     margin: 0 20px 0 20px;

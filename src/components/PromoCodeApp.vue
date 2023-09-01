@@ -1,5 +1,7 @@
 <script setup>
+import {useVivatStore} from "@/storege/store";
 
+const vivatStore = useVivatStore();
 </script>
 
 <template>
@@ -16,7 +18,7 @@
     <button class="button--border">Применить</button>
   </div>
 
-  <h4>Сумма заказа:</h4>
+  <h4>Сумма заказа: {{vivatStore.finalPrice}}</h4>
   <button class="button--full">Далее</button>
 
 </div>
