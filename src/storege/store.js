@@ -49,5 +49,11 @@ export const useVivatStore = defineStore('vivatStore', {
                 return currentPrice
             }, 0)
         },
+        priceNoDiscount(state){
+            return state.basket.reduce((currentPrice,item) => {
+                if (!item.gift) return currentPrice + (item.price * item.counts)
+                return currentPrice
+            }, 0)
+        },
     }
 })

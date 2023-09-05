@@ -3,6 +3,7 @@
   <route-page-app/>
   <card-basket-app/>
   <recommend-app/>
+  <footer-app/>
 </template>
 
 <script>
@@ -10,13 +11,15 @@ import HeadApp from './components/HeadApp.vue'
 import RoutePageApp from "@/components/RoutePageApp.vue";
 import CardBasketApp from "@/components/CardBasketApp.vue";
 import RecommendApp from "@/components/RecommendApp.vue";
+import FooterApp from "@/components/FooterApp.vue";
 
 export default {
   components: {
     HeadApp,
     RoutePageApp,
     CardBasketApp,
-    RecommendApp
+    RecommendApp,
+    FooterApp
   }
 }
 </script>
@@ -30,7 +33,6 @@ body{
   width: 100%;
 }
 .app{
-  padding: 30px 50px 0 50px;
   a{
     text-decoration: none;
     color: #CC693E;
@@ -55,6 +57,10 @@ body{
   }
   .context{
     color: #666666;
+  }
+  .discount{
+    color: #666666;
+    text-decoration: line-through;
   }
   .passive{
     color: #CCCCCC;

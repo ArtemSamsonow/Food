@@ -17,16 +17,33 @@ const vivatStore = useVivatStore();
       </div>
     </div>
   </div>
+  <div class="recommend__finalPrice">
+    <h4>Сумма заказа: <span class="discount">{{vivatStore.priceNoDiscount}}</span> {{vivatStore.finalPrice}} ₽</h4>
+    <button class="button--full">Далее</button>
+  </div>
 </div>
 </template>
 
 <style scoped lang="scss">
 .recommend{
-  margin-bottom: 100px;
+  padding: 0 50px 0 50px;
+  margin-bottom: 50px;
+  h2{
+    margin-bottom: 50px;
+  }
+  .recommend__finalPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    button{
+      width: 250px;
+    }
+  }
   .recommend__card{
     display: flex;
     overflow: auto;
     padding-bottom: 50px;
+    margin-bottom: 30px;
     &::-webkit-scrollbar {
       height: 2px;
       border-radius: 20px;

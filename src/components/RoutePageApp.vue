@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   margin-top: 100px;
+  padding: 0 50px 0 50px;
   .cycle{
     display: flex;
     margin: 0 20px 0 20px;

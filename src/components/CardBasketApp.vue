@@ -56,6 +56,7 @@ const vivatStore = useVivatStore()
 <style scoped lang="scss">
 .basket{
   display: flex;
+  padding: 0 50px 0 50px;
   .basket__card{
     display: flex;
     background-color: #F1F1F1;

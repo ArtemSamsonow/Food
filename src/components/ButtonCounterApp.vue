@@ -36,8 +36,9 @@ function minus (id) {
 <div class="basket__card__counter">
 
   <div class="basket__card__counter__price">
-    <span class="disabled"></span>
-    <span>{{ price - discount }} ₽</span>
+    <span class="disabled" v-if="discount === 0"></span>
+    <span class="discount" v-else>{{ price }}</span>
+    <span>&ensp; {{ price - discount }} ₽</span>
   </div>
 
   <div class="basket__card__counter__count">
@@ -47,8 +48,9 @@ function minus (id) {
   </div>
 
   <div class="basket__card__counter__newPrice">
-    <span class="disabled"></span>
-    <span class="finalPrice">{{ (price - discount) * counts }} ₽</span>
+    <span class="disabled" v-if="discount === 0"></span>
+    <span class="discount" v-else>{{ price * counts}}</span>
+    <span class="finalPrice">&ensp; {{ (price - discount) * counts }} ₽</span>
   </div>
 </div>
 </template>

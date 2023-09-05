@@ -41,6 +41,7 @@ import locateImg from "@/assets/locate.svg";
 .header{
   display: flex;
   justify-content: space-around;
+  padding: 30px 50px 0 50px;
   .header__locate{
     p{
       margin-left: 20px;

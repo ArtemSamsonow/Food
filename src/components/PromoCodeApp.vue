@@ -18,7 +18,7 @@ const vivatStore = useVivatStore();
     <button class="button--border">Применить</button>
   </div>
 
-  <h4>Сумма заказа: {{vivatStore.finalPrice}}</h4>
+  <h4>Сумма заказа: <span class="discount">{{vivatStore.priceNoDiscount}}</span> {{vivatStore.finalPrice}} ₽</h4>
   <button class="button--full">Далее</button>
 
 </div>
